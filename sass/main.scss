@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap');
+@import 'colors';
+@import 'fonts';
+@import 'variables';
+@import 'buttons';
+@import 'responsive';
+
+
+body {
+    background-color: $white;
+    margin: $nil;
+    font-family: $main-font;
+}
+
+.container {
+    background-color: transparent;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @media screen and (max-width: $break-med) {
+        padding: 0 30px;
+        width: 80%;
+    }
+}
+
+.navbar {
+    display: inline-block;
+    background-color: $white;
+    width: 100%;
+    padding-top: 10px;
+
+    ul {
+        list-style: none;
+        text-align: right;
+    }
+
+    li {
+        display: inline-block;
+        margin-left: -10px;
+        padding: 0px 25px;
+        font-weight: 800;
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+
+    li:nth-child(3){
+        margin-left: 10px;
+        padding: 10px 25px;
+    }
+
+    span.icon {
+    position: absolute;
+    margin-top: 50px;
+    font-size: 3rem;
+    }
+
+    @media screen and (max-width: $break-large) {
+        position: absolute;
+        margin-top: -80px;
+        padding-top: 20px;
+        padding-right: 20px;
+    }
+}
+
+h1 {
+    font-size: 4rem;
+    padding-top: 7rem;
+    color: $blue-brand;
+}
+
+h3 {
+    margin-top: -2rem;
+    font-weight: 400;
+}
+
+footer {
+    position: fixed;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0e1e24" fill-opacity="1" d="M0,288L48,272C96,256,192,224,288,208C384,192,480,192,576,170.7C672,149,768,107,864,90.7C960,75,1056,85,1152,80C1248,75,1344,53,1392,42.7L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" ></path></svg>');
+    background-repeat: no-repeat;
+    width: 100%;
+    bottom: -5px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px; 
+    z-index: -1;
+}
+// social links
+.social-bar {
+    position: fixed;
+    width: 30%;
+    right: 10vh;
+    bottom: 10vh;
+    }   
+    ul {
+        list-style: none;
+        text-align: right;
+    }
+
+    li {
+        display: inline-block;
+        margin-left: -10px;
+        padding: 10px 25px;
+        font-weight: 800;
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+
+// links
+a {
+    text-decoration: none;
+    color: $blue-brand;
+
+    &:hover {
+        color: $blue-hover;
+        transition: color ease-in-out 0.5s;
+        border-bottom: 2px solid $blue-hover;
+    }
+}
+
+.wave {
+  animation-name: wave-animation;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate(  0.0deg) }
+   10% { transform: rotate(-15.0deg) }
+   20% { transform: rotate( 15.0deg) }
+   30% { transform: rotate(-15.0deg) }
+   40% { transform: rotate(  15.0deg) }
+   50% { transform: rotate(  0.0deg) }
+  100% { transform: rotate(  0.0deg) }
+}
