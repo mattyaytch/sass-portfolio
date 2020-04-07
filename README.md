@@ -14,6 +14,6 @@ In the Terminal:
     npm install -g live-server
 
 This will run the live server on your machine locally.
-+ Quick Note, make sure you keep two Terminal windows open.
- One for Live Server
- One for directory changes and commits
++ Quick Note, make sure you keep two Terminal windows open:
++ One for Live Server;
++ One for directory changes and commits;
