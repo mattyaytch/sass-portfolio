@@ -1,0 +1,85 @@
+/* -- button styling -- */
+
+.toggle-btn {
+    background: $white;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: 0px;
+    padding: 20px;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+.toggle-btn #overlay {
+    height: 100vh;
+    width: 100vh;
+    transition: all ease-in-out 1s;
+}
+
+
+/* -- toggle bar styling -- */
+
+.toggle-bar {
+  width: 36px;
+  height: 2px;
+  background: $blue-brand;
+  position: relative;
+  top: 48px;
+  right: 0;
+}
+
+
+/* -- top and bottom bar -- */
+
+.toggle-bar:before,
+.toggle-bar:after {
+  width: 36px;
+  height: 2px;
+  background: $blue-brand;
+  content: '';
+  position: absolute;
+}
+
+.toggle-bar:before {
+  top: -10px;
+}
+
+.toggle-bar:after {
+  top: 10px;
+}
+
+
+/* -- makes the center bar disappear by changing it's color to the same as the button -- */
+
+.toggle-clicked .toggle-bar {
+  background: inherit;
+}
+
+
+/* -- repositions the top and bottom bars so they anchor to the center of the button when we rotate them -- */
+
+.toggle-clicked .toggle-bar:before,
+.toggle-clicked .toggle-bar:after {
+  top: 0;
+}
+
+
+/* -- change the rotation angle for different effects -- */
+
+.toggle-clicked .toggle-bar:before {
+  transform: rotate(45deg);
+}
+
+.toggle-clicked .toggle-bar:after {
+  transform: rotate(-45deg);
+}
+
+
+/* -- controls the speed of transitions -- */
+
+.toggle-bar,
+.toggle-bar:before,
+.toggle-bar:after {
+  transition: all 0.35s;
+}

@@ -18,6 +18,68 @@
   .big-button span {
     font-size: 1rem; }
 
+/* -- button styling -- */
+.toggle-btn {
+  background: #ffffff;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  right: 0px;
+  padding: 20px;
+  margin-right: 40px;
+  cursor: pointer; }
+
+.toggle-btn #overlay {
+  height: 100vh;
+  width: 100vh;
+  transition: all ease-in-out 1s; }
+
+/* -- toggle bar styling -- */
+.toggle-bar {
+  width: 36px;
+  height: 2px;
+  background: #0e1e24;
+  position: relative;
+  top: 48px;
+  right: 0; }
+
+/* -- top and bottom bar -- */
+.toggle-bar:before,
+.toggle-bar:after {
+  width: 36px;
+  height: 2px;
+  background: #0e1e24;
+  content: '';
+  position: absolute; }
+
+.toggle-bar:before {
+  top: -10px; }
+
+.toggle-bar:after {
+  top: 10px; }
+
+/* -- makes the center bar disappear by changing it's color to the same as the button -- */
+.toggle-clicked .toggle-bar {
+  background: inherit; }
+
+/* -- repositions the top and bottom bars so they anchor to the center of the button when we rotate them -- */
+.toggle-clicked .toggle-bar:before,
+.toggle-clicked .toggle-bar:after {
+  top: 0; }
+
+/* -- change the rotation angle for different effects -- */
+.toggle-clicked .toggle-bar:before {
+  transform: rotate(45deg); }
+
+.toggle-clicked .toggle-bar:after {
+  transform: rotate(-45deg); }
+
+/* -- controls the speed of transitions -- */
+.toggle-bar,
+.toggle-bar:before,
+.toggle-bar:after {
+  transition: all 0.35s; }
+
 body {
   background-color: #ffffff;
   margin: 0;
@@ -36,7 +98,8 @@ body {
   display: inline-block;
   background-color: #ffffff;
   width: 100%;
-  padding-top: 10px; }
+  padding-top: 10px;
+  top: 10%; }
   .navbar ul {
     list-style: none;
     text-align: right; }
@@ -47,6 +110,9 @@ body {
     font-weight: 800;
     font-size: 14px;
     letter-spacing: 1px; }
+    @media screen and (max-width: 750px) {
+      .navbar li {
+        display: none; } }
   .navbar li:nth-child(3) {
     margin-left: 10px;
     padding: 10px 25px; }
@@ -61,14 +127,33 @@ body {
       padding-top: 20px;
       padding-right: 20px; } }
 
+.toggle-btn {
+  display: none; }
+  @media screen and (max-width: 750px) {
+    .toggle-btn {
+      display: visible; } }
+
+@media screen and (max-width: 750px) {
+  .main {
+    margin-top: 35%; } }
+
 h1 {
   font-size: 4rem;
   padding-top: 7rem;
   color: #0e1e24; }
+  @media screen and (max-width: 750px) {
+    h1 {
+      font-size: 2rem;
+      margin-top: 150px; } }
 
 h3 {
-  margin-top: -2rem;
+  margin-top: 2rem;
+  margin-bottom: -2rem;
   font-weight: 400; }
+  @media screen and (max-width: 750px) {
+    h3 {
+      font-size: 0.9rem;
+      margin-top: 1rem; } }
 
 footer {
   position: fixed;
@@ -80,24 +165,36 @@ footer {
   right: 0px;
   margin-bottom: 0px;
   z-index: -1; }
+  @media screen and (max-width: 750px) {
+    footer {
+      bottom: -10px;
+      width: 100%; } }
 
 .social-bar {
   position: fixed;
-  width: 30%;
-  right: 10vh;
-  bottom: 10vh; }
-
-ul {
-  list-style: none;
-  text-align: right; }
-
-li {
-  display: inline-block;
-  margin-left: -10px;
-  padding: 10px 25px;
-  font-weight: 800;
-  font-size: 14px;
-  letter-spacing: 1px; }
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  color: #ffffff; }
+  @media screen and (max-width: 750px) {
+    .social-bar {
+      right: 0;
+      bottom: -20px;
+      font-size: 2rem; } }
+  .social-bar ul {
+    list-style: none;
+    text-align: right; }
+  .social-bar li {
+    display: inline-block;
+    margin-left: -10px;
+    padding: 10px 25px;
+    font-weight: 800;
+    font-size: 14px;
+    letter-spacing: 1px; }
+    @media screen and (max-width: 750px) {
+      .social-bar li {
+        right: 0;
+        font-size: 29px; } }
 
 a {
   text-decoration: none;

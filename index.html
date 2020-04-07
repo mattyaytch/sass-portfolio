@@ -5,23 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matthew Harvey: Front End Developer</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 
-    <div class="container">
-<div class="navbar">
-    <span class="icon">✌️🤚👊<span class="wave">✊</span></span>
-    <ul>
-        <li><a href="#">PROJECTS</a></li>
-        <li><a href="#">BLOG</a></li>
-        <li class="big-button">RESUME</li>
-    </ul>
+<div class="container">
+    <div class="navbar">
+        <div class="wrapper">
+            <div class="toggle-btn overlay" onclick="navToggle()">
+                <div class="toggle-bar"></div>
+            </div>
+        
+        </div>
+        <span class="icon">✌️🤚👊<span class="wave">✊</span></span>
+        <ul>
+            <li><a href="#">PROJECTS</a></li>
+            <li><a href="#">BLOG</a></li>
+            <li class="big-button">RESUME</li>
+        </ul>
+    </div>
 </div>
-    <h1>Create <span>Magic</span> with Me.</h1>
-    <h3>If you are looking for a dynamic software engineer, you have come to the right place...</h3>
-    <br>
-    <button class="big-button"><span>Hire Me</span></button>
+<div class="main">
+    <div class="container">
+        <h1>Create <span>Magic</span> with Me.</h1>
+        <h3>If you are looking for a dynamic front-end software engineer, you have come to the right place...</h3>
+        <br>
+        <button class="big-button"><span>Hire Me</span></button>
+    </div>
 </div>
 <footer>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -29,17 +40,16 @@
             d="M0,288L48,272C96,256,192,224,288,208C384,192,480,192,576,170.7C672,149,768,107,864,90.7C960,75,1056,85,1152,80C1248,75,1344,53,1392,42.7L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
         </path>
     </svg>
-</footer>
-<div class="container">
     <div class="social-bar">
         <ul>
-            <li>CodePen</li>
-            <li>LinkedIn</li>
+            <li><i class="fab fa-codepen"></i></li>
             <li><i class="fab fa-github"></i></li>
+            <li><i class="fab fa-linkedin"></i></li>
         </ul>
     </div>
+</footer>
+</div>    
 </div>
-    
-</div>
+<script src="js/script.js"></script>
 </body>
 </html>
